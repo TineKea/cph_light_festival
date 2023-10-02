@@ -1,0 +1,127 @@
+---
+import "../styles/style.css";
+---
+
+<nav class="navbar">
+    <a href="#">Logo_placeholder</a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Program</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+    </ul>
+    <div class="burger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<script>
+    const burger = document.querySelector(".burger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-link").forEach(n => n.
+    addEventListener("click", () => {
+        burger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))
+</script>
+
+<style>
+    li{
+        list-style: none;
+    }
+
+    a{
+        color: #BE3CDF;
+        text-decoration: none;
+    }
+
+    .navbar{
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 24px;
+    }
+
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .nav-link{
+        transition: 0.7s ease;
+    }
+
+    .nav-link:hover{
+        color: #EC9A3B;
+    }
+
+    .burger{
+        display: none;
+        cursor: pointer;
+    }
+
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+
+    @media(max-width:768px){
+        .burger{
+            display: block;
+        }
+
+        .burger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+
+        .burger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .burger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .nav-menu{
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            background-color: #141429;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-item{
+            margin: 16px 0;
+        }
+
+        .nav-menu.active{
+            left: 0;
+        }
+    }
+
+</style>
