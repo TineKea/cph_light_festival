@@ -1,9 +1,29 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-header{
-    background-color: #141429;
+h1 {
+  /* indsæt font style */
+  /* indsæt font weight */
+}
+
+h2 {
+  /* indsæt font style */
+  /* indsæt font weight */
+}
+
+h3 {
+  /* indsæt font style */
+  /* indsæt font weight */
+}
+
+p {
+  /* indsæt font style */
+  /* indsæt font weight */
+}
+
+header {
+  background-color: #141429;
 }
