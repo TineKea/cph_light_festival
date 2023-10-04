@@ -1,0 +1,55 @@
+<div class="cphlightfest_title_container">
+  <h1>
+    <span class="copenhagen_h1">COPENHAGEN</span>
+    <br />
+    <span class="lightfest_h1">LIGHT FESTIVAL</span>
+  </h1>
+  <h2 class="year">2024</h2>
+</div>
+
+<style>
+  .copenhagen_h1 {
+    font-family: "termina", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #e0ebf9;
+    font-size: 2.8rem;
+  }
+
+  .lightfest_h1 {
+    font-family: "termina", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3.6rem;
+    background: linear-gradient(
+      to right,
+      #4076f7 0%,
+      #e9b06e 50%,
+      #be3cdf 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Define the animation */
+    animation: moveColors 3s infinite;
+  }
+
+  .year {
+    font-size: 1.8rem;
+    color: #785be3;
+  }
+
+  /* Define the keyframes animation */
+  @keyframes moveColors {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Add a hover effect to pause the animation on hover */
+  .lightfest_h1:hover {
+    animation-play-state: paused;
+  }
+</style>

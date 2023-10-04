@@ -2,53 +2,47 @@
 import Nav from "../components/Nav.astro";
 import Video from "../components/Video.astro";
 import InfoBox from "../components/InfoBox.astro";
+import CphLightFestTitle from "../components/CphLightFestTitle.astro";
 import "../styles/style.css";
 import "../styles/index.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css">
-		<title>CPH Light Festival</title>
-	</head>
-	<body>
-		<header>
-			<Nav />
-		</header>
-		<main>
-
-<!-- Forside video -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css" />
+    <title>CPH Light Festival</title>
+  </head>
+  <body>
+    <header>
+      <Nav />
+    </header>
+    <main>
+      <!-- Forside video -->
 
       <Video />
 
       <!-- Overskrift -->
 
-      <div class="cphlightfest_title_container">
-        <h1>
-          <span class="copenhagen_h1">COPENHAGEN</span>
-          <br />
-          <span class="lightfest_h1">LIGHT FESTIVAL</span>
-        </h1>
-        <h2 class="year">2024</h2>
-      </div>
+      <CphLightFestTitle />
+
       <div class="main_grid_container">
         <div class="text-container">
           <p>
-            February, the coldest, darkest month. in the midst of the wild,
-            stormy and gloomy Scandinavian winter.Folks gather inside to hide
-            away While we are lighting up Copenhagen To show you our beautiful
-            city From it's darkest place.
+            February, the coldest, darkest month. <br>in the midst of the wild,
+            stormy and gloomy Scandinavian winter.<br>Folks gather inside to hide
+            away <br>While we are lighting up Copenhagen <br>To show you our beautiful
+            city <br>From it's darkest place.
           </p>
         </div>
 
         <div class="dropdown-container">
           <InfoBox
-  header="Facts about Copenhagen Light Festival"
-  text={`
+            header="Facts about Copenhagen Light Festival"
+            text={`
     This is the 6th time the festival is being held.
 
     In 2021, the festival attracted 500.000 visitors, which makes it the most visited festival in Denmark.
@@ -61,8 +55,7 @@ import "../styles/index.css";
 
     Our app, which was downloaded 50.000 times last year, features light-themed treasure hunts with various prizes.
   `}
-/>
-
+          />
 
           <InfoBox
             header="Sustainability"
