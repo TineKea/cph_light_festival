@@ -1,8 +1,9 @@
 ---
-import Nav from "../components/Nav.astro"
-import Video from "../components/Video.astro"
-import '../styles/style.css';
-import '../styles/index.css';
+import Nav from "../components/Nav.astro";
+import Video from "../components/Video.astro";
+import InfoBox from "../components/InfoBox.astro";
+import "../styles/style.css";
+import "../styles/index.css";
 ---
 
 <html lang="en">
@@ -11,7 +12,8 @@ import '../styles/index.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css">
+		<title>CPH Light Festival</title>
 	</head>
 	<body>
 		<header>
@@ -21,36 +23,62 @@ import '../styles/index.css';
 
 <!-- Forside video -->
 
-<Video />
+      <Video />
 
-<!-- Overskrift -->
+      <!-- Overskrift -->
 
-<div class="cphlightfest_title_container">
-<h1><span class="copenhagen_h1">COPENHAGEN</span>
-	<br>
-	<span class="lightfest_h1">LIGHT FESTIVAL</span>
-</h1>
-<h2 class="year">2024</h2>
-</div>
-<div class="main_grid_container">
-<!-- paragraf citat højre-->
-<div class="text-container">
-<p>February, the coldest, darkest month. in the midst of the wild, stormy and 
-gloomy Scandinavian winter.Folks gather inside to hide away
-While we are lighting up Copenhagen
-To show you our beautiful city
-From it’s darkest place. </p> </div>
+      <div class="cphlightfest_title_container">
+        <h1>
+          <span class="copenhagen_h1">COPENHAGEN</span>
+          <br />
+          <span class="lightfest_h1">LIGHT FESTIVAL</span>
+        </h1>
+        <h2 class="year">2024</h2>
+      </div>
+      <div class="main_grid_container">
+        <div class="text-container">
+          <p>
+            February, the coldest, darkest month. in the midst of the wild,
+            stormy and gloomy Scandinavian winter.Folks gather inside to hide
+            away While we are lighting up Copenhagen To show you our beautiful
+            city From it's darkest place.
+          </p>
+        </div>
 
-<div class="dropdown-container">
-<!-- Drop down menu 1 -->
-<h4 class="facts_container">Facts about Copenhagen Light Festival 2023 
-<img src="../public/angle-small-down.png"></h4>
+        <div class="dropdown-container">
+          <InfoBox
+  header="Facts about Copenhagen Light Festival"
+  text={`
+    This is the 6th time the festival is being held.
 
-<!-- Drop down menu 2 -->
-<h4 class="sustain_container">Sustainability <img src="../public/angle-small-down.png"></h4>
-</div>
-</div>
-		</main>
-		<footer>FOOTER</footer>
-	</body>
+    In 2021, the festival attracted 500.000 visitors, which makes it the most visited festival in Denmark.
+
+    The festival features more than 55 installations, pop-up events, and theme-events.
+
+    The installations are concentrated in the city enter, but the outsides of the city are also involved, in places such as Bavnehøj, Sundby, Refshaleøen and Ørestad.
+
+    Walking, cycling and running routes have been developed that lead you straight to the installations. These vary in length, from 2,5 km-9 km.
+
+    Our app, which was downloaded 50.000 times last year, features light-themed treasure hunts with various prizes.
+  `}
+/>
+
+
+          <InfoBox
+            header="Sustainability"
+            text={`Maps are not printed, but our mobile app shows where all the installations are placed relative to your own location.
+Maps can also be printed via our homepage, and are visible also on the all the pylons set up around the city.
+During one day the festival's electricity usage correspond with 3 fully charged electric cars`}
+          />
+        </div>
+
+        <!--Facts about Copenhagen Light Festival 2023  -->
+
+        <!-- Drop down menu 2 -->
+
+        <!--Sustainability  -->
+      </div>
+    </main>
+  </body>
+  <footer>FOOTER</footer>
 </html>

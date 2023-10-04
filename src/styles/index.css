@@ -1,5 +1,5 @@
 main {
-  background-color: rgb(155, 155, 182);
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,8 @@ main {
 }
 
 .cphlightfest_title_container {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   text-align: center;
   margin: 0;
 }
@@ -25,15 +27,43 @@ main {
 }
 
 .text-container {
+  padding-top: 2rem;
   text-align: right; 
   margin: 0;
-  grid-column: 6/8;
+  grid-column: 5/8;
 }
 
 
 .dropdown-container {
-  
+  padding-top: 4rem;
   text-align: left; 
   margin: 0;
-  grid-column: 2/4;
+  grid-column: 2/6;
+}
+.info-box {
+  position: relative;
+}
+
+.info-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: none;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+
+.info-content.hidden {
+  
+  opacity: 0;
+  pointer-events: none; 
+}
+
+/* Show it when the h4 is clicked */
+.toggle-info.clicked + .info-content {
+  display: block;
+  opacity: 1; 
+  pointer-events: auto; 
 }
