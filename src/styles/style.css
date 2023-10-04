@@ -1,3 +1,44 @@
+/*
+Skrifttyper tilføjet:
+Termina Thin
+font-family: "termina", sans-serif;
+font-weight: 100;
+font-style: normal;
+Termina Extra Light
+font-family: "termina", sans-serif;
+font-weight: 200;
+font-style: normal;
+Termina Light
+font-family: "termina", sans-serif;
+font-weight: 300;
+font-style: normal;
+Termina Regular
+font-family: "termina", sans-serif;
+font-weight: 400;
+font-style: normal;
+Termina Medium
+font-family: "termina", sans-serif;
+font-weight: 500;
+font-style: normal;
+Termina Demi
+font-family: "termina", sans-serif;
+font-weight: 600;
+font-style: normal;
+Termina Bold
+font-family: "termina", sans-serif;
+font-weight: 700;
+font-style: normal;
+Termina Heavy
+font-family: "termina", sans-serif;
+font-weight: 800;
+font-style: normal;
+Termina Black
+font-family: "termina", sans-serif;
+font-weight: 900;
+font-style: normal;
+*/
+
+
 * {
   padding: 0;
   margin: 0;
@@ -5,27 +46,50 @@
 }
 
 h1 {
-  /* indsæt font style */
-  /* indsæt font weight */
+font-family: "termina", sans-serif;
+font-weight: 900;
+font-style: normal;
+color: #E0EBF9;
 }
 
 h2 {
-  /* indsæt font style */
-  /* indsæt font weight */
+  font-family: "termina", sans-serif;
+font-weight: 300;
+font-style: normal;
+color: #E0EBF9;
 }
 
 h3 {
-  /* indsæt font style */
-  /* indsæt font weight */
+font-family: "termina", sans-serif;
+font-weight: 700;
+font-style: normal;
+color: #E0EBF9;
+}
+
+h4 {
+font-family: "termina", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #E0EBF9;
+}
+
+h5 {
+
 }
 
 p {
-  /* indsæt font style */
-  /* indsæt font weight */
+ font-family: "loos-wide", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #E0EBF9;
 }
 
 /* Indsæt andre generelle css regler som du synes passer Tine :) */
 
 header {
   background-color: #141429;
+}
+
+body {
+  background-color: #202023;
 }
