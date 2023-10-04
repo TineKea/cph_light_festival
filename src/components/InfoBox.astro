@@ -1,0 +1,29 @@
+---
+const { header, text } = Astro.props;
+---
+
+<div class="info-box">
+  <h4 class="facts_container toggle-info">
+    {header}
+    <img src="/angle-small-down.png" class="arrow-icon" />
+  </h4>
+  <div class="info-content hidden">
+    <p>{text}</p>
+  </div>
+</div>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleInfoElements = document.querySelectorAll(".toggle-info");
+
+  toggleInfoElements.forEach((factsToggle) => {
+    factsToggle.addEventListener("click", function () {
+      factsToggle.classList.toggle("clicked"); 
+    });
+  });
+});
+</script>
+
